@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Lobby</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link href="{% static 'chat/css/style.css' %}" rel="stylesheet">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center h-screen transition-colors duration-300">
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl w-full max-w-lg p-6 relative">
+        <!-- Header with Dark Mode Toggle -->
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200">💬 Let's Chat!</h1>
+            <button id="dark-mode-toggle" class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                <span id="dark-mode-icon" class="text-gray-800 dark:text-gray-200">🌙</span>
+            </button>
+        </div>
+
+        <!-- Chat Messages Container -->
+        <div id="messages" class="h-72 overflow-y-auto p-3 space-y-3 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-inner">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+
+        <!-- Message Input Form -->
+        <form id="form" class="flex gap-2 mt-4">
+            <input
+                type="text"
+                id="message"
+                name="message"
+                placeholder="Type a message..."
+                class="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:placeholder-gray-400 transition"
+                autocomplete="off"
+            />
+            <button
+                type="submit"
+                class="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 transition"
+            >
+                🚀
+            </button>
+        </form>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="{% static 'chat/js/script.js' %}"></script>
+</body>
+</html>
