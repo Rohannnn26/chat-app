@@ -1,5 +1,7 @@
 // Establish WebSocket connection
-let url = `ws://${window.location.host}/ws/socket-server/`;
+let protocol = window.location.protocol === "https:" ? "wss://" : "ws://";
+let url = `${protocol}${window.location.host}/ws/socket-server/`;
+
 const chatSocket = new WebSocket(url);
 
 // Handle WebSocket connection opening
