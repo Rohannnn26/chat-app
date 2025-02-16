@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",  # Local development
     "localhost",  # Local development
     "chat-app-yy6g.onrender.com",  # Render deployment
+    "web-production-6af7.up.railway.app/"
 ]
 
 
