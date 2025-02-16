@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-xn5k6kv#adp)4sbo1+0e5v^f^k)a*7cx@!@ma0r*jvaxf(umbd
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "chat-app-yy6g.onrender.com",
-    "localhost",  # For local development
+    "127.0.0.1",  # Local development
+    "localhost",  # Local development
+    "chat-app-yy6g.onrender.com",  # Render deployment
 ]
 
 
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
